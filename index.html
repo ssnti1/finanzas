@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Parker">
+<meta name="apple-mobile-web-app-title" content="Doria">
 <meta name="theme-color" content="#111110">
-<title>Parker · Finanzas</title>
+<title>Doria · Finanzas</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -214,7 +214,7 @@ canvas{width:100% !important;display:block}
   <div class="greeting">
     <div>
       <div class="g-label" id="g-label">Cargando…</div>
-      <div class="g-name">Parker 💰</div>
+      <div class="g-name">Doria 💰</div>
     </div>
     <div class="avatar" onclick="openSettings()">P</div>
   </div>
@@ -425,8 +425,8 @@ canvas{width:100% !important;display:block}
 /* ═══════════════════════════════════════════
    CONSTANTS & DATA
 ═══════════════════════════════════════════ */
-const KEY = 'parker_v3';
-const BUDGETS_KEY = 'parker_budgets_v3';
+const KEY = 'Doria_v3';
+const BUDGETS_KEY = 'Doria_budgets_v3';
 
 const DEFAULT_BUDGETS = {
   alimentación:600000,transporte:300000,vivienda:1200000,
@@ -962,7 +962,7 @@ function exportCSV() {
   const blob=new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'});
   const url=URL.createObjectURL(blob);
   const a=document.createElement('a');
-  a.href=url;a.download='parker-finanzas.csv';a.click();
+  a.href=url;a.download='Doria-finanzas.csv';a.click();
   URL.revokeObjectURL(url);
   closeSettings();toast('CSV exportado ✓');
 }
@@ -1016,7 +1016,7 @@ if('serviceWorker' in navigator){
   const sw=`
 self.addEventListener('install',()=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(clients.claim()));
-const CACHE='parker-v3';
+const CACHE='Doria-v3';
 self.addEventListener('fetch',e=>{
   if(e.request.method!=='GET')return;
   e.respondWith(
